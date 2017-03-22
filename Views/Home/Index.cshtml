@@ -1,0 +1,603 @@
+﻿@{
+    Layout = "~/Views/Shared/_addition.cshtml";
+
+}
+
+
+<div class="container">
+
+    <!-- Advanced Form Example With Validation -->
+    <div class="row clearfix">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="header">
+                    <h2>FAST Research Paper Review Perfoma </h2>
+
+                </div>
+                <div class="body">
+                    <form action="../Home/save" id="wizard_with_validation" method="POST">
+
+                      
+
+
+                        <h3>About Paper & Reviewer</h3>
+                        <fieldset>
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name="paperTitle" class="form-control" required>
+                                    <label class="form-label">Title of Paper*</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name="paperNo" class="form-control" required>
+                                    <label class="form-label">Paper No*</label>
+                                </div>
+                            </div>
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name="name" class="form-control" required>
+                                    <label class="form-label">Reviewer's Name*</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="email" name="email" class="form-control" required>
+                                    <label class="form-label">Email*</label>
+                                </div>
+                            </div>
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name="designation" class="form-control" required>
+                                    <label class="form-label">Designation*</label>
+                                </div>
+                            </div>
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name="affiliation" class="form-control" required>
+                                    <label class="form-label">Affiliation*</label>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+
+                        <h3>Reviewer's Comments PART-I </h3>
+                        <fieldset>
+
+
+                            <br />
+                            <label for="acceptTerms-3">TITLE </label>
+                            <br />
+                            <label for="acceptTerms-3">Clear representation of the study taken? </label>
+                            <hr />
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-2" name="title" value="Title does not represent the study undertaken." type="radio" required>
+                                    <label for="acceptTerms-2" style="margin-left:4%"> &nbsp;&nbsp;Title does not represent the study undertaken.</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-3" name="title" value="Major modifications needed" type="radio" required>
+                                    <label for="acceptTerms-3" style="margin-left:4%"> &nbsp;&nbsp;Major modifications needed</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-4" name="title" value="Minor edits needed" type="radio" required>
+                                    <label for="acceptTerms-4" style="margin-left:4%"> &nbsp;&nbsp;Minor edits needed</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-5" name="title" value="The title truly represents the study undertaken." type="radio" required>
+                                    <label for="acceptTerms-5" style="margin-left:4%"> &nbsp;&nbsp;The title truly represents the study undertaken.</label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="title_comment" class="form-control">
+
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+                            <br />
+                            <label for="acceptTerms-3">ABSTRACT </label>
+                            <br />
+                            <label for="acceptTerms-3">Abstract succinctly summarizes the background, aim, sample, method, results and implications of the study?</label>
+                            <hr />
+
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-6" name="abstract" value="The abstract is wordy and nonspecific." type="radio" required>
+                                    <label for="acceptTerms-6" style="margin-left:4%"> &nbsp;&nbsp;The abstract is wordy and nonspecific.</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-7" name="abstract" value="Major edits needed" type="radio" required>
+                                    <label for="acceptTerms-7" style="margin-left:4%"> &nbsp;&nbsp;Major edits needed</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-8" name="abstract" value="Minor edits needed" type="radio" required>
+                                    <label for="acceptTerms-8" style="margin-left:4%"> &nbsp;&nbsp;Minor edits needed</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-9" name="abstract" value="The author uses concise language and cites specific details" type="radio" required>
+                                    <label for="acceptTerms-9" style="margin-left:4%"> &nbsp;&nbsp;The author uses concise language and cites specific details </label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="abstract_comment" class="form-control">
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+
+                            <br />
+                            <label for="acceptTerms-3">INTRODUCTION </label>
+                            <br />
+                            <label for="acceptTerms-3">The explanation of the significance of the problem is sufficient?></label>
+                            <hr />
+
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-16" name="introduction" value="The subject and purpose are not obvious." type="radio" required>
+                                    <label for="acceptTerms-16" style="margin-left:4%"> &nbsp;&nbsp;The subject and purpose are not obvious.</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-17" name="introduction" value="The subject and purpose are somewhat obvious." type="radio" required>
+                                    <label for="acceptTerms-17" style="margin-left:4%"> &nbsp;&nbsp;The subject and purpose are somewhat obvious.</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-18" name="introduction" value="Author describes the main subject and purpose of the research and indicates why the research is important…" type="radio" required>
+                                    <label for="acceptTerms-18" style="margin-left:4%"> &nbsp;&nbsp;Author describes the main subject and purpose of the research and indicates why the research is important…</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-19" name="introduction" value="…and places the research in a larger topical context. - Makes no errors in language use or conventions - All acronyms are defined when first used" type="radio" required>
+                                    <label for="acceptTerms-19" style="margin-left:4%">
+                                        &nbsp;&nbsp;…and places the research in a larger topical context.
+                                        - Makes no errors in language use or conventions
+                                        - All acronyms are defined when first used
+                                    </label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="introduction_comment" class="form-control">
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+
+                            <br />
+                            <label for="acceptTerms-3">LITERATURE REVIEW </label>
+                            <br />
+                            <label for="acceptTerms-3">Literature review demonstrates a clear relevance between problem and ODL and other relevant literature?</label>
+                            <hr />
+
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-26" name="literature_review" value="The content is irrelevant - The summary appears to have no direction" type="radio" required>
+                                    <label for="acceptTerms-26" style="margin-left:4%">
+                                        &nbsp;&nbsp;The content is irrelevant - The summary appears to have no direction
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-27" name="literature_review" value="The content is somewhat relevant - There is a basic flow from one section to the next" type="radio" required>
+                                    <label for="acceptTerms-27" style="margin-left:4%">
+                                        &nbsp;&nbsp;The content is somewhat relevant - There is a basic flow from one section to the next
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-28" name="literature_review" value="The content is  relevant - The summary goes from general ideas to specific conclusions…" type="radio" required>
+                                    <label for="acceptTerms-28" style="margin-left:4%">
+                                        &nbsp;&nbsp;The content is  relevant - The summary goes from general ideas to specific conclusions…
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-29" name="literature_review" type="radio" value="The content is largely relevant - Appropriate handling of primary and secondary source material - Citations are appropriate and updated" required>
+                                    <label for="acceptTerms-29" style="margin-left:4%">
+                                        &nbsp;&nbsp;The content is largely relevant - Appropriate handling of primary and secondary source material - Citations are appropriate and updated
+
+                                    </label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="literature_review_comment" class="form-control">
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+
+                            <br />
+                            <label for="acceptTerms-3">RESEARCH QUESTION</label>
+                            <br />
+                            <label for="acceptTerms-3">The research questions clearly demonstrate the purpose of the study?</label>
+                            <hr />
+
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-36" name="research_question" value="Research question(s) were not formed and are not apparent from the literature review." type="radio" required>
+                                    <label for="acceptTerms-36" style="margin-left:4%">
+                                        &nbsp;&nbsp;Research question(s) were not formed and are not apparent from the literature review.
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-37" value="Research question(s) were not formed but could be formed through the literature review." name="research_question" type="radio" required>
+                                    <label for="acceptTerms-37" style="margin-left:4%">
+                                        &nbsp;&nbsp;Research question(s) were not formed but could be formed through the literature review.
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-38" value="Research question(s) are formed through the literature review but not clearly stated." name="research_question" type="radio" required>
+                                    <label for="acceptTerms-38" style="margin-left:4%">
+                                        &nbsp;&nbsp;Research question(s) are formed through the literature review but not clearly stated.
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" value="Research question(s) are formed through the literature review and clearly stated." id="acceptTerms-39" name="research_question" type="radio" required>
+                                    <label for="acceptTerms-39" style="margin-left:4%">
+                                        &nbsp;&nbsp;Research question(s) are formed through the literature review and clearly stated.
+
+                                    </label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="research_question_comment" class="form-control">
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+
+
+
+                        <h3>Reviewer's Comments PART-II </h3>
+                        <fieldset>
+
+
+                            <br />
+                            <label for="acceptTerms-3">METHODOLOGY</label>
+                            <br />
+                            <label for="acceptTerms-3">Research design and methods are appropriate? </label>
+                            <hr />
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-12" name="methodology" value="Fatally flawed Methods are not obvious." type="radio" required>
+                                    <label for="acceptTerms-12" style="margin-left:4%">
+                                        &nbsp;&nbsp;Fatally flawed Methods are not obvious.
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-13" name="methodology" value="Methods are somewhat obvious. Fairly reasonable work" type="radio" required>
+                                    <label for="acceptTerms-13" style="margin-left:4%"> &nbsp;&nbsp;Methods are somewhat obvious. Fairly reasonable work</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-14" name="methodology" value="Author describes what they did: data sources and methods of data collection are provided…" type="radio" required>
+                                    <label for="acceptTerms-14" style="margin-left:4%"> &nbsp;&nbsp;Author describes what they did: data sources and methods of data collection are provided…</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-15" name="methodology" value="…and convinces the reader that the methods employed were appropriate to the research. The approach is very apt" type="radio" required>
+                                    <label for="acceptTerms-15" style="margin-left:4%"> &nbsp;&nbsp;…and convinces the reader that the methods employed were appropriate to the research. The approach is very apt</label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="methodology_comment" class="form-control">
+
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+                            <br />
+                            <label for="acceptTerms-3">STYLE AND LANGUAGE </label>
+                            <br />
+                            <label for="acceptTerms-3">Structure of the research is complete, coherent, and well-organized?</label>
+                            <hr />
+
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-1116" name="style_and_language" value="Much of the paper is confusing, Not a quality work at all. Get help at the writing center." type="radio" required>
+                                    <label for="acceptTerms-1116" style="margin-left:4%"> &nbsp;&nbsp;Much of the paper is confusing, Not a quality work at all. Get help at the writing center.</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-1117" name="style_and_language" value="Mostly understandable by me with some effort. Major edits needed in: arguments,	level of English, sentence structure, spelling, punctuation, formatting" type="radio" required>
+                                    <label for="acceptTerms-1117" style="margin-left:4%"> &nbsp;&nbsp;Mostly understandable by me with some effort. Major edits needed in: arguments,	level of English, sentence structure, spelling, punctuation, formatting</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-1118" name="style_and_language" value="Understandable by most readers. Minor edits needed in: arguments, level of English, sentence structure, spelling, punctuation, formatting" type="radio" required>
+                                    <label for="acceptTerms-1118" style="margin-left:4%"> &nbsp;&nbsp;Understandable by most readers. Minor edits needed in: arguments, level of English, sentence structure, spelling, punctuation, formatting</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-1119" name="style_and_language" value="Clearly understandable, Overall structure of the arguments is perfect. Clear articulate writing used, Paper has no linguistic shortcomings." type="radio" required>
+                                    <label for="acceptTerms-1119" style="margin-left:4%"> &nbsp;&nbsp;Clearly understandable, Overall structure of the arguments is perfect. Clear articulate writing used, Paper has no linguistic shortcomings. </label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="style_and_language_comment" class="form-control">
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+
+                            <br />
+                            <label for="acceptTerms-3">RESULTS </label>
+                            <br />
+                            <label for="acceptTerms-3">Sound presentation of the data collected?></label>
+                            <hr />
+
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-116" name="results" value="Results are not presented clearly." type="radio" required>
+                                    <label for="acceptTerms-116" style="margin-left:4%"> &nbsp;&nbsp;Results are not presented clearly.</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-117" name="results" value="Unimportant and vague results are mentioned " type="radio" required>
+                                    <label for="acceptTerms-117" style="margin-left:4%"> &nbsp;&nbsp;Unimportant and vague results are mentioned </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-118" name="results" value="Clear presentation" type="radio" required>
+                                    <label for="acceptTerms-118" style="margin-left:4%"> &nbsp;&nbsp;Clear presentation</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-119" name="results" value="Perfect presentation of the results obtained" type="radio" required>
+                                    <label for="acceptTerms-119" style="margin-left:4%">
+                                        &nbsp;&nbsp;Perfect presentation of the results obtained
+                                    </label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="results_comment" class="form-control">
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+
+                            <br />
+                            <label for="acceptTerms-3">DISCUSSION </label>
+                            <br />
+                            <label for="acceptTerms-3">Interpretation is accurate and useful based on research questions?</label>
+                            <hr />
+
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-126" name="discussion" value="Discussion shows no relevance with the research and underlying concepts." type="radio" required>
+                                    <label for="acceptTerms-126" style="margin-left:4%">
+                                        &nbsp;&nbsp;Discussion shows no relevance with the research and underlying concepts.
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-127" name="discussion" value="Discussion shows vague understanding and little relevance with the research and underlying concepts." type="radio" required>
+                                    <label for="acceptTerms-127" style="margin-left:4%">
+                                        &nbsp;&nbsp;Discussion shows vague understanding and little relevance with the research and underlying concepts.
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-128" name="discussion" value="Author/s describe what they learned, and provides outcomes for the main results or an explanation of why no results were achieved." type="radio" required>
+                                    <label for="acceptTerms-128" style="margin-left:4%">
+                                        &nbsp;&nbsp;Author/s describe what they learned, and provides outcomes for the main results or an explanation of why no results were achieved.
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-129" name="discussion" type="radio" value="…and relates the results to the research/project question, sound analysis and arguments." required>
+                                    <label for="acceptTerms-129" style="margin-left:4%">
+                                        &nbsp;&nbsp;…and relates the results to the research/project question, sound analysis and arguments.
+
+                                    </label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="discussion_comment" class="form-control">
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+
+                            <br />
+                            <label for="acceptTerms-3">CONCLUSION/IMPLICATIONS</label>
+                            <br />
+                            <label for="acceptTerms-3">Effective conclusion about the implications for distance education theory, research, and/or practice?</label>
+                            <hr />
+
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-136" name="conclusion" value="Conclusions are missing, unclear, illogical, irrelevant to the research question, or unsupported by argument or evidence Conclusion is unclear." type="radio" required>
+                                    <label for="acceptTerms-136" style="margin-left:4%">
+                                        &nbsp;&nbsp;Conclusions are missing, unclear, illogical, irrelevant to the research question, or unsupported by argument or evidence Conclusion is unclear.
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-137" value="Conclusion is present but the correlation between the research and its results is missing." name="conclusion" type="radio" required>
+                                    <label for="acceptTerms-137" style="margin-left:4%">
+                                        &nbsp;&nbsp;Conclusion is present but the correlation between the research and its results is missing.
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-138" value="Author describes the correlation between the research and its results, and the conclusions, anticipated or final, that they draw from the research…" name="conclusion" type="radio" required>
+                                    <label for="acceptTerms-138" style="margin-left:4%">
+                                        &nbsp;&nbsp;Author describes the correlation between the research and its results, and the conclusions, anticipated or final, that they draw from the research…
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" value="…and describes how this work will contribute to the field. The study adds to our knowledge in the relevant filed Conclusions are present, logical, related to the research question, supported by argument and evidence." id="acceptTerms-139" name="conclusion" type="radio" required>
+                                    <label for="acceptTerms-139" style="margin-left:4%">
+                                        &nbsp;&nbsp;…and describes how this work will contribute to the field. The study adds to our knowledge in the relevant filed Conclusions are present, logical, related to the research question, supported by argument and evidence.
+
+                                    </label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="conclusion_comment" class="form-control">
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+
+                            <br />
+                            <label for="acceptTerms-3">REFERENCES</label>
+                            <br />
+                            <label for="acceptTerms-3">
+                                Perfect and appropriate referencing style?
+                            </label>
+                            <hr />
+
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-146" name="references" value="Does not follow IEEE style or inappropriate article selection." type="radio" required>
+                                    <label for="acceptTerms-146" style="margin-left:4%">
+                                        &nbsp;&nbsp;Does not follow IEEE style or inappropriate article selection.
+                                    </label>
+                                    <br />
+
+                                    <input style="margin-right:5%" id="acceptTerms-147" value="Major edits needed. " name="references" type="radio" required>
+                                    <label for="acceptTerms-147" style="margin-left:4%">
+                                        &nbsp;&nbsp;Major edits needed.
+                                    </label>
+
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-148" value="Minor edits needed." name="references" type="radio" required>
+                                    <label for="acceptTerms-148" style="margin-left:4%">
+                                        &nbsp;&nbsp;Minor edits needed.
+                                    </label>
+                                    <br />
+                                    <input style="margin-right:5%" value="IEEE style is Perfect, appropriate article selection." id="acceptTerms-149" name="references" type="radio" required>
+                                    <label for="acceptTerms-149" style="margin-left:4%">
+                                        &nbsp;&nbsp;IEEE style is Perfect, appropriate article selection.
+
+                                    </label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <input type="text" name="references_comment" class="form-control">
+                                    <label class="form-label">Comments (If any)</label>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+
+                        <h3>Final Recommendation - Finish</h3>
+                        <fieldset>
+                            <br />
+
+                            <label for="acceptTerms-3">FINAL RECOMMENDATION </label>
+                            <hr />
+
+                            <div class="form-group form-float">
+
+                                <div class="form">
+                                    <input style="margin-right:5%" id="acceptTerms-102" name="final_recommendation" type="radio" required>
+                                    <label for="acceptTerms-102" style="margin-left:4%"> &nbsp;&nbsp;Accept with no revision</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-103" name="final_recommendation" type="radio" required>
+                                    <label for="acceptTerms-103" style="margin-left:4%"> &nbsp;&nbsp;Accept subject to minor revisions</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-104" name="final_recommendation" type="radio" required>
+                                    <label for="acceptTerms-104" style="margin-left:4%"> &nbsp;&nbsp;Accept subject to substantial revision</label>
+                                    <br />
+                                    <input style="margin-right:5%" id="acceptTerms-105" name="final_recommendation" type="radio" required>
+                                    <label for="acceptTerms-105" style="margin-left:4%"> &nbsp;&nbsp;Reject</label>
+                                    <br />
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <textarea name="final_recommendation_comment" class="form-control" required></textarea>
+                                    <label class="form-label">Do you have any recommendations to improve it, if so please mention below?</label>
+                                </div>
+                            </div>
+                            <div class="form-group" float:right">
+                                <div class="form-line">
+                                    <br>
+                                    <textarea name="editor_comment" class="form-control" required></textarea>
+                                    <label class="form-label">Do you have any recommendations to improve it, if so please mention below?</label>
+                                </div>
+                            </div>
+                            <br />
+                            <hr />
+                            <div class="form-group form-float">
+
+                                <div class="form-line">
+                                    <input id="acceptTerms-22" name="acceptTerms" type="checkbox" required>
+                                    <label for="acceptTerms-22">I have reviewed the above Paper with best effort.</label>
+
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+
+
+                   
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #END# Advanced Form Example With Validation -->
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("a").click(function () {
+          
+            var v = this.valueOf() + "";
+           
+            if(v.indexOf("#finish")>0)
+            {
+                $('form#wizard_with_validation').submit();
+            }
+        })
+    });
+</script>
